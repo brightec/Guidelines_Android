@@ -526,7 +526,7 @@ Resource IDs and names are written in __lowercase_underscore__.
 
 #### 2.3.2.1 ID naming
 
-IDs should be prefixed with the name of the element in lowercase underscore. For example:
+IDs should be prefixed with the name of the element in lowercase underscore, not abbreviated. For example:
 
 
 | Element            | Prefix            |
@@ -557,21 +557,23 @@ Menu example:
 
 #### 2.3.2.2 Strings
 
-String names start with a prefix that identifies the section they belong to. For example `registration_email_hint` or `registration_name_hint`. If a string __doesn't belong__ to any section, then you should follow the rules below:
+String names should follow the rules below:
 
 
 | Prefix             | Description                           |
 | -----------------  | --------------------------------------|
 | `error_`             | An error message                      |
-| `msg_`               | A regular information message         |
-| `title_`             | A title, i.e. a dialog title          |
+| `title_`             | A title, i.e. a dialog title or activity title          |
 | `action_`            | An action such as "Save" or "Create"  |
+| `label_`            | A label for input field  |
+| `hint_`            | A hint for an edit text  |
 
+If these rules do not cover your case use a sensible category prefix.
 
 
 #### 2.3.2.3 Styles and Themes
 
-Unless the rest of resources, style names are written in __UpperCamelCase__.
+Style and theme names are written in __UpperCamelCase__.
 
 ### 2.3.3 Attributes ordering
 
@@ -613,7 +615,7 @@ onView(withId(R.id.view))
 # License
 
 ```
-Copyright 2015 Ribot Ltd.
+Copyright 2016 Brightec Ltd.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
