@@ -2,7 +2,7 @@
 
 ## 1.1 Project structure
 
-New projects should follow the Android Gradle project structure that is defined on the [Android Gradle plugin user guide](http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Project-Structure). The [ribot Boilerplate](https://github.com/ribot/android-boilerplate) project is a good reference to start from.
+New projects should follow the Android Gradle project structure that is defined on the [Android Gradle plugin user guide](http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Project-Structure).
 
 ## 1.2 File naming
 
@@ -22,25 +22,11 @@ Naming conventions for drawables:
 
 | Asset Type   | Prefix            |		Example               |
 |--------------| ------------------|-----------------------------|
-| Action bar   | `ab_`             | `ab_stacked.9.png`          |
+| Background   | `bg_`             | `bg_screen1.9.png`          |
 | Button       | `btn_`	            | `btn_send_pressed.9.png`    |
-| Dialog       | `dialog_`         | `dialog_top.9.png`          |
-| Divider      | `divider_`        | `divider_horizontal.9.png`  |
 | Icon         | `ic_`	            | `ic_star.png`               |
-| Menu         | `menu_	`           | `menu_submenu_bg.9.png`     |
-| Notification | `notification_`	| `notification_bg.9.png`     |
-| Tabs         | `tab_`            | `tab_pressed.9.png`         |
 
-Naming conventions for icons (taken from [Android iconography guidelines](http://developer.android.com/design/style/iconography.html)):
-
-| Asset Type                      | Prefix             | Example                      |
-| --------------------------------| ----------------   | ---------------------------- |
-| Icons                           | `ic_`              | `ic_star.png`                |
-| Launcher icons                  | `ic_launcher`      | `ic_launcher_calendar.png`   |
-| Menu icons and Action Bar icons | `ic_menu`          | `ic_menu_archive.png`        |
-| Status bar icons                | `ic_stat_notify`   | `ic_stat_notify_msg.png`     |
-| Tab icons                       | `ic_tab`           | `ic_tab_recent.png`          |
-| Dialog icons                    | `ic_dialog`        | `ic_dialog_info.png`         |
+All icons should follow `ic_{{name}}_{{color}}_{{size}}dp`. See [Material Icons Guide](https://google.github.io/material-design-icons/).
 
 Naming conventions for selector states:
 
@@ -60,10 +46,13 @@ Layout files should match the name of the Android components that they are inten
 | Component        | Class Name             | Layout Name                   |
 | ---------------- | ---------------------- | ----------------------------- |
 | Activity         | `UserProfileActivity`  | `activity_user_profile.xml`   |
+| Activity Content         | `UserProfileActivity`  | `content_user_profile.xml`   |
 | Fragment         | `SignUpFragment`       | `fragment_sign_up.xml`        |
 | Dialog           | `ChangePasswordDialog` | `dialog_change_password.xml`  |
 | AdapterView item | ---                    | `item_person.xml`             |
 | Partial layout   | ---                    | `partial_stats_bar.xml`       |
+
+Note that Activity refers to the layout for the activity which will include the  appbar, any view that overlays the main content and the content container.
 
 A slightly different case is when we are creating a layout that is going to be inflated by an `Adapter`, e.g to populate a `ListView`. In this case, the name of the layout should start with `item_`.
 
@@ -128,6 +117,7 @@ This is bad: `import foo.*;`
 This is good: `import foo.Bar;`
 
 See more info [here](https://source.android.com/source/code-style.html#fully-qualify-imports)
+Use Android Studio tool by right-click on file then select Optimize Imports
 
 ## 2.2 Java style rules
 
@@ -197,19 +187,20 @@ class MyClass {
 }
 ```
 
-Braces around the statements are required unless the condition and the body fit on one line.
-
-If the condition and the body fit on one line and that line is shorter than the max line length, then braces are not required, e.g.
+Braces around the statements are required unless it's a return, break or continue e.g.
 
 ```java
-if (condition) body();
+if (condition) return;
 ```
 
-This is __bad__:
+These are __bad__:
 
 ```java
 if (condition)
     body();  // bad!
+```
+```java
+if (condition) body();  // bad!
 ```
 
 ### 2.2.6 Annotations
@@ -386,9 +377,10 @@ When using one of these components, you __must__ define the keys as a `static fi
 | -----------------  | ----------------- |
 | SharedPreferences  | `PREF_`             |
 | Bundle             | `BUNDLE_`           |
-| Fragment Arguments | `ARGUMENT_`         |
+| Fragment Arguments | `ARG_`         |
 | Intent Extra       | `EXTRA_`            |
 | Intent Action      | `ACTION_`           |
+| Request Code      | `REQUEST_`           |
 
 Note that the arguments of a Fragment - `Fragment.getArguments()` - are also a Bundle. However, because this is a quite common use of Bundles, we define a different prefix for them.
 
@@ -398,7 +390,7 @@ Example:
 // Note the value of the field is the same as the name to avoid duplication issues
 static final String PREF_EMAIL = "PREF_EMAIL";
 static final String BUNDLE_AGE = "BUNDLE_AGE";
-static final String ARGUMENT_USER_ID = "ARGUMENT_USER_ID";
+static final String ARG_USER_ID = "ARG_USER_ID";
 
 // Intent-related items use full package name as value
 static final String EXTRA_SURNAME = "com.myapp.extras.EXTRA_SURNAME";
@@ -427,7 +419,7 @@ For Fragments it is named `newInstance()` and handles the creation of the Fragme
 public static UserFragment newInstance(User user) {
 	UserFragment fragment = new UserFragment;
 	Bundle args = new Bundle();
-	args.putParcelable(ARGUMENT_USER, user);
+	args.putParcelable(ARG_USER, user);
 	fragment.setArguments(args)
 	return fragment;
 }
@@ -435,7 +427,7 @@ public static UserFragment newInstance(User user) {
 
 __Note 1__: These methods should go at the top of the class before `onCreate()`.
 
-__Note 2__: If we provide the methods described above, the keys for extras and arguments should be `private` because there is not need for them to be exposed outside the class.
+__Note 2__: If we provide the methods described above, the keys for extras and arguments should be `private` because there is no need for them to be exposed outside the class.
 
 ### 2.2.15 Line length limit
 
@@ -476,12 +468,12 @@ __Method chain case__
 When multiple methods are chained in the same line - for example when using Builders - every call to a method should go in its own line, breaking the line before the `.`
 
 ```java
-Picasso.with(context).load("http://ribot.co.uk/images/sexyjoe.jpg").into(imageView);
+Picasso.with(context).load("http://google.com/images/example.jpg").into(imageView);
 ```
 
 ```java
 Picasso.with(context)
-        .load("http://ribot.co.uk/images/sexyjoe.jpg")
+        .load("http://google.com/images/example.jpg")
         .into(imageView);
 ```
 
@@ -499,28 +491,6 @@ loadPicture(context,
         mImageViewProfilePicture,
         clickListener,
         "Title of the picture");
-```
-
-### 2.2.16 RxJava chains styling
-
-Rx chains of operators require line-wrapping. Every operator must go in a new line and the line should be broken before the `.`
-
-```java
-public Observable<Location> syncLocations() {
-    return mDatabaseHelper.getAllLocations()
-            .concatMap(new Func1<Location, Observable<? extends Location>>() {
-                @Override
-                 public Observable<? extends Location> call(Location location) {
-                     return mRetrofitService.getLocation(location.id);
-                 }
-            })
-            .retry(new Func2<Integer, Throwable, Boolean>() {
-                 @Override
-                 public Boolean call(Integer numRetries, Throwable throwable) {
-                     return throwable instanceof RetrofitError;
-                 }
-            });
-}
 ```
 
 ## 2.3 XML style rules
