@@ -379,10 +379,8 @@ Example:
 static final String PREF_EMAIL = "PREF_EMAIL";
 static final String BUNDLE_AGE = "BUNDLE_AGE";
 static final String ARG_USER_ID = "ARG_USER_ID";
-
-// Intent-related items use full package name as value
-static final String EXTRA_SURNAME = "com.myapp.extras.EXTRA_SURNAME";
-static final String ACTION_OPEN_USER = "com.myapp.action.ACTION_OPEN_USER";
+static final String EXTRA_SURNAME = "EXTRA_SURNAME";
+static final String ACTION_OPEN_USER = "ACTION_OPEN_USER";
 ```
 
 ### 2.2.12 Arguments in Fragments and Activities
@@ -470,12 +468,12 @@ __Long parameters case__
 When a method has many parameters or its parameters are very long, we should break the line after every comma `,`
 
 ```java
-loadPicture(context, "http://ribot.co.uk/images/sexyjoe.jpg", mImageViewProfilePicture, clickListener, "Title of the picture");
+loadPicture(context, "http://google.com/images/example.jpg", mImageViewProfilePicture, clickListener, "Title of the picture");
 ```
 
 ```java
 loadPicture(context,
-        "http://ribot.co.uk/images/sexyjoe.jpg",
+        "http://google.com/images/example.jpg",
         mImageViewProfilePicture,
         clickListener,
         "Title of the picture");
