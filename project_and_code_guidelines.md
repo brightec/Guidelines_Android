@@ -479,6 +479,12 @@ loadPicture(context,
         "Title of the picture");
 ```
 
+### 2.2.14 Short methods, clear names
+
+Methods should be short and stick to one function. This makes the code easier to read and test. The method name should reflect clearly what that function is, with more detail included in the Javadoc comment.
+
+[here](https://source.android.com/source/code-style.html#write-short-methods)
+
 ## 2.3 XML style rules
 
 ### 2.3.1 Use self closing tags
@@ -598,7 +604,11 @@ onView(withId(R.id.view))
         .check(matches(isDisplayed()))
 ```
 
-## 2.5 Todo's
+## 2.5 Comments
+
+You should be extensively using comments to help explain to the reader what your code was intending to do. This helps other readers understand your code and spot mistakes. As a minimum any public methods should have comments attached explaining what that method does. [Javadoc info](https://source.android.com/source/code-style.html#use-javadoc-standard-comments)
+
+### 2.5.1 Todo's
 
 The use of todo's is encouraged and can be very useful if used correctly. All todo's should adhear to the following format:  
 `{Type}: {Name} {Date} : {Msg}`  
@@ -607,19 +617,19 @@ For example, in Java:
 
 These formats are included in the Android Studio shared settings.
 
-### 2.5.1 TODO
+#### 2.5.1.1 TODO
 
 TODO should be used when you have a task which needs to be completed.
 
-### 2.5.2 FIXME
+#### 2.5.1.2 FIXME
 
 FIXME should be used when the code which has been written needs fixing.
 
-### 2.5.3 IMPROVE
+#### 2.5.1.3 IMPROVE
 
 IMPROVE should be used when you recognise that the code is working but could be made more efficient.
 
-### 2.5.4 BREAK
+#### 2.5.1.4 BREAK
 
 BREAK should be used to mark something which absolutely cannot go out in a release build.
 
