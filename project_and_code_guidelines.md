@@ -598,6 +598,31 @@ onView(withId(R.id.view))
         .check(matches(isDisplayed()))
 ```
 
+## 2.5 Todo's
+
+The use of todo's is encouraged and can be very useful if used correctly. All todo's should adhear to the following format:  
+`{Type}: {Name} {Date} : {Msg}`  
+For example, in Java:  
+`// TODO: joebloggs 01/01/2000 : Complete this method which should do this thing`
+
+These formats are included in the Android Studio shared settings.
+
+### 2.5.1 TODO
+
+TODO should be used when you have a task which needs to be completed.
+
+### 2.5.2 FIXME
+
+FIXME should be used when the code which has been written needs fixing.
+
+### 2.5.3 IMPROVE
+
+IMPROVE should be used when you recognise that the code is working but could be made more efficient.
+
+### 2.5.4 BREAK
+
+BREAK should be used to mark something which absolutely cannot go out in a release build.
+
 # License
 
 ```
