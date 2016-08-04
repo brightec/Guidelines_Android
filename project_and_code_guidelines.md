@@ -629,9 +629,9 @@ FIXME should be used when the code which has been written needs fixing.
 
 IMPROVE should be used when you recognise that the code is working but could be made more efficient.
 
-#### 2.5.1.4 BREAK
+#### 2.5.1.4 FATAL
 
-BREAK should be used to mark something which absolutely cannot go out in a release build.
+FATAL should be used to mark something which absolutely cannot go out in a release build.
 
 # License
 
