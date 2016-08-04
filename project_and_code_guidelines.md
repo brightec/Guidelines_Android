@@ -72,6 +72,10 @@ Resource files in the values folder should be __plural__, e.g. `strings.xml`, `s
 
 ## 2.1 Java language rules
 
+Ensure that you are using the Android Studio shared settings and if you wish to make any changes submit a pull request to be reviewed. This will ensure consistent code between developers.
+
+Ensure that you regularly use the Android Studio 'Reformat Code' (ALT+CMD+L) tool which will reformat a file to match your code style settings. This should, as a minimum, be used before a submission is made on every file that you have changed in that submission. This will reduce the code review time and keep the code tidier.
+
 ### 2.1.1 Don't ignore exceptions
 
 You must never do the following:
@@ -117,7 +121,7 @@ This is bad: `import foo.*;`
 This is good: `import foo.Bar;`
 
 See more info [here](https://source.android.com/source/code-style.html#fully-qualify-imports)
-Use Android Studio tool by right-click on file then select Optimize Imports
+Use Android Studio tool by right-click on file then select Optimize Imports. This should, as a minimum, be used before a submission is made on every file that you have changed in that submission.
 
 ## 2.2 Java style rules
 
@@ -262,33 +266,17 @@ More info [here](https://source.android.com/source/code-style.html#limit-variabl
 
 ### 2.2.8 Logging guidelines
 
-Use the logging methods provided by the `Log` class to print out error messages or other information that may be useful for developers to identify issues:
+Use the logging methods provided by the `Logger` class in the brighteccomponents library to print out error messages or other information that may be useful for developers to identify issues:
 
-* `Log.v(String tag, String msg)` (verbose)
-* `Log.d(String tag, String msg)` (debug)
-* `Log.i(String tag, String msg)` (information)
-* `Log.w(String tag, String msg)` (warning)
-* `Log.e(String tag, String msg)` (error)
+* `Logger.v(Class clazz, String msg)` (verbose)
+* `Logger.d(Class clazz, String msg)` (debug)
+* `Logger.i(Class clazz, String msg)` (information)
+* `Logger.w(Class clazz, String msg)` (warning)
+* `Logger.e(Class clazz, String msg)` (error)
 
-As a general rule, we use the class name as tag and we define it as a `static final` field at the top of the file. For example:
+Note that the `Logger` class will not log any message if in DEBUG build.
 
-```java
-public class MyClass {
-    private static final String TAG = MyClass.class.getSimpleName();
-
-    public myMethod() {
-        Log.e(TAG, "My error message");
-    }
-}
-```
-
-VERBOSE and DEBUG logs __must__ be disabled on release builds. It is also recommended to disable INFORMATION, WARNING and ERROR logs but you may want to keep them enabled if you think they may be useful to identify issues on release builds. If you decide to leave them enabled, you have to make sure that they are not leaking private information such as email addresses, user ids, etc.
-
-To only show logs on debug builds:
-
-```java
-if (BuildConfig.DEBUG) Log.d(TAG, "The value of x is " + x);
-```
+If you need a custom tag then you can use `(String tag, String msg)` methods, however this should not be the norm.
 
 ### 2.2.9 Class member ordering
 
