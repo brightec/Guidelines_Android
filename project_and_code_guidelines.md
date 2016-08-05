@@ -529,7 +529,7 @@ IDs should be prefixed with the name of the element in lowercase underscore, not
 | `Relative`               | `relative_`             |
 | `Linear`               | `linear_`             |
 
-Some exception may apply, for example:
+Some exceptions may apply, for example:
 
 | Element            | Prefix            |
 | -----------------  | ----------------- |
