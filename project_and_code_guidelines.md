@@ -524,6 +524,7 @@ IDs should be prefixed with the name of the element in lowercase underscore, not
 | Element            | Prefix            |
 | -----------------  | ----------------- |
 | `TextView`           | `text_`             |
+| `EditText`          | `edit_`            |
 | `ImageView`          | `image_`            |
 | `Button`             | `button_`           |
 | `Menu`               | `menu_`             |
