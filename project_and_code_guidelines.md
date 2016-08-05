@@ -520,16 +520,22 @@ Resource IDs and names are written in __lowercase_underscore__.
 
 IDs should be prefixed with the name of the element in lowercase underscore, not abbreviated. For example:
 
-
 | Element            | Prefix            |
 | -----------------  | ----------------- |
 | `TextView`           | `text_`             |
-| `EditText`          | `edit_`            |
 | `ImageView`          | `image_`            |
 | `Button`             | `button_`           |
 | `Menu`               | `menu_`             |
 | `Relative`               | `relative_`             |
 | `Linear`               | `linear_`             |
+
+Some exception may apply, for example:
+
+| Element            | Prefix            |
+| -----------------  | ----------------- |
+| `EditText`          | `edit_`            |
+| `FloatingActionButton`          | `fab_`            |
+| `RadioButton`             | `radio_`           |
 
 Image view example:
 
