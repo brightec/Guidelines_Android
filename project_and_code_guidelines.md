@@ -527,6 +527,8 @@ IDs should be prefixed with the name of the element in lowercase underscore, not
 | `ImageView`          | `image_`            |
 | `Button`             | `button_`           |
 | `Menu`               | `menu_`             |
+| `Relative`               | `relative_`             |
+| `Linear`               | `linear_`             |
 
 Image view example:
 
