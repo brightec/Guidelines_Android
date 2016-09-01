@@ -26,7 +26,9 @@ Naming conventions for drawables:
 | Button       | `btn_`	            | `btn_send_pressed.9.png`    |
 | Icon         | `ic_`	            | `ic_star.png`               |
 
-All icons should follow `ic_{{name}}_{{color}}_{{size}}dp`. See [Material Icons Guide](https://google.github.io/material-design-icons/).
+__All icons should follow `ic_{{name}}_{{color}}_{{size}}dp`__. See [Material Icons Guide](https://google.github.io/material-design-icons/).
+
+Note: Occasionally color won't be applicable, in which case don't include it. If the resource isn't square, provide the width.
 
 Naming conventions for selector states:
 
