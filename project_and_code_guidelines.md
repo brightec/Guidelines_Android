@@ -276,7 +276,7 @@ Use the logging methods provided by the `Logger` class in the brighteccomponents
 * `Logger.w(Class clazz, String msg)` (warning)
 * `Logger.e(Class clazz, String msg)` (error)
 
-Note that the `Logger` class will not log any message if in DEBUG build.
+Note that the `Logger` class will only log messages if in a DEBUG build.
 
 If you need a custom tag then you can use `(String tag, String msg)` methods, however this should not be the norm.
 
