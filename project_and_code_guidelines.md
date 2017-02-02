@@ -419,12 +419,12 @@ __Note 2__: If we provide the methods described above, the keys for extras and a
 
 ### 2.2.13 Line length limit
 
-Code lines should not exceed __100 characters__. If the line is longer than this limit there are usually two options to reduce its length:
+Code lines should not exceed __130 characters__. If the line is longer than this limit there are usually two options to reduce its length:
 
 * Extract a local variable or method (preferable).
 * Apply line-wrapping to divide a single line into multiple ones.
 
-There are two __exceptions__ where it is possible to have lines longer than 100:
+There are two __exceptions__ where it is possible to have lines longer than 130:
 
 * Lines that are not possible to split, e.g. long URLs in comments.
 * `package` and `import` statements.
