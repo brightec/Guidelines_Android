@@ -4,3 +4,5 @@ List of guidelines and libraries that we use at __brightec__ when developing for
 
 * [Project and code guidelines](project_and_code_guidelines.md)
 * [Libraries](android_libraries.md)
+
+android_studio_settings.jar is out of date. Ask for it to be updated if required
