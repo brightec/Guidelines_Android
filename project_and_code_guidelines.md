@@ -622,9 +622,9 @@ You should be extensively using comments to help explain to the reader what your
 ### 2.5.1 Todo's
 
 The use of todo's is encouraged and can be very useful if used correctly. All todo's should adhear to the following format:  
-`{Type}: {Name} {Date} : {Msg}`  
+`{Type} : {Name} {Date} : {Msg}`  
 For example, in Java:  
-`// TODO: joebloggs 01/01/2000 : Complete this method which should do this thing`
+`// TODO : joebloggs 01/01/2000 : Complete this method which should do this thing`
 
 These formats are included in the Android Studio shared settings.
 
@@ -640,9 +640,9 @@ FIXME should be used when the code which has been written needs fixing.
 
 IMPROVE should be used when you recognise that the code is working but could be made more efficient.
 
-#### 2.5.1.4 FATAL
+#### 2.5.1.4 STOPSHIP
 
-FATAL should be used to mark something which absolutely cannot go out in a release build.
+STOPSHIP should be used to mark something which absolutely cannot go out in a release build.
 
 # License
 
