@@ -4,6 +4,39 @@ Ensure that you are using the Android Studio shared settings and if you wish to 
 
 Ensure that you regularly use the Android Studio 'Reformat Code' (ALT+CMD+L) tool which will reformat a file to match your code style settings. This should, as a minimum, be used before a submission is made on every file that you have changed in that submission. This will reduce the code review time and keep the code tidier.
 
+## Table of Contents
+
+- [Nomenclature](#1-java-language-rules)
+  + [Packages](#packages)
+  + [Classes & Interfaces](#classes--interfaces)
+  + [Methods](#methods)
+  + [Fields](#fields)
+  + [Variables & Parameters](#variables--parameters)
+  + [Misc](#misc)
+- [Declarations](#declarations)
+  + [Visibility Modifiers](#visibility-modifiers)
+  + [Fields & Variables](#fields--variables)
+  + [Classes](#classes)
+  + [Data Type Objects](#data-type-objects)
+  + [Enum Classes](#enum-classes)
+- [Spacing](#spacing)
+  + [Indentation](#indentation)
+  + [Line Length](#line-length)
+  + [Vertical Spacing](#vertical-spacing)
+- [Semicolons](#semicolons)
+- [Getters & Setters](#getters--setters)
+- [Brace Style](#brace-style)
+- [When Statements](#when-statements)
+- [Annotations](#annotations)
+- [Types](#types)
+  + [Type Inference](#type-inference)
+  + [Constants vs. Variables](#constants-vs-variables)
+  + [Companion Objects](#companion-objects)
+  + [Optionals](#optionals)
+- [Language](#language)
+- [Copyright Statement](#copyright-statement)
+- [Smiley Face](#smiley-face)
+
 ## 1 Java language rules
 
 ### 1.1 Don't ignore exceptions
