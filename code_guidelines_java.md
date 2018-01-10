@@ -1,84 +1,12 @@
-# 1. Project guidelines
-
-## 1.1 Project structure
-
-New projects should follow the Android Gradle project structure that is defined on the [Android Gradle plugin user guide](http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Project-Structure).
-
-## 1.2 File naming
-
-### 1.2.1 Class files
-Class names are written in [UpperCamelCase](http://en.wikipedia.org/wiki/CamelCase).
-
-For classes that extend an Android component, the name of the class should end with the name of the component; for example: `SignInActivity`, `SignInFragment`, `ImageUploaderService`, `ChangePasswordDialog`.
-
-### 1.2.2 Resources files
-
-Resources file names are written in __lowercase_underscore__.
-
-#### 1.2.2.1 Drawable files
-
-Naming conventions for drawables:
-
-
-| Asset Type   | Prefix            |		Example               |
-|--------------| ------------------|-----------------------------|
-| Background   | `bg_`             | `bg_screen1.9.png`          |
-| Button       | `btn_`	            | `btn_send_pressed.9.png`    |
-| Icon         | `ic_`	            | `ic_star.png`               |
-
-__All icons should follow `ic_{{name}}_{{color}}_{{size}}dp`__. See [Material Icons Guide](https://google.github.io/material-design-icons/).
-
-Note: Occasionally color won't be applicable, in which case don't include it. If the resource isn't square, provide the width.
-
-Naming conventions for selector states:
-
-| State	       | Suffix          | Example                     |
-|--------------|-----------------|-----------------------------|
-| Normal       | `_normal`       | `btn_order_normal.9.png`    |
-| Pressed      | `_pressed`      | `btn_order_pressed.9.png`   |
-| Focused      | `_focused`      | `btn_order_focused.9.png`   |
-| Disabled     | `_disabled`     | `btn_order_disabled.9.png`  |
-| Selected     | `_selected`     | `btn_order_selected.9.png`  |
-
-
-#### 1.2.2.2 Layout files
-
-Layout files should match the name of the Android components that they are intended for but moving the top level component name to the beginning. For example, if we are creating a layout for the `SignInActivity`, the name of the layout file should be `activity_sign_in.xml`.
-
-| Component        | Class Name             | Layout Name                   |
-| ---------------- | ---------------------- | ----------------------------- |
-| Activity         | `UserProfileActivity`  | `activity_user_profile.xml`   |
-| Activity Content         | `UserProfileActivity`  | `content_user_profile.xml`   |
-| Fragment         | `SignUpFragment`       | `fragment_sign_up.xml`        |
-| Dialog           | `ChangePasswordDialog` | `dialog_change_password.xml`  |
-| AdapterView item | ---                    | `item_person.xml`             |
-| Partial layout   | ---                    | `partial_stats_bar.xml`       |
-
-Note that Activity refers to the layout for the activity which will include the  appbar, any view that overlays the main content and the content container.
-
-A slightly different case is when we are creating a layout that is going to be inflated by an `Adapter`, e.g to populate a `ListView`. In this case, the name of the layout should start with `item_`.
-
-Note that there are cases where these rules will not be possible to apply. For example, when creating layout files that are intended to be part of other layouts. In this case you should use the prefix `partial_`.
-
-#### 1.2.2.3 Menu files
-
-Similar to layout files, menu files should match the name of the component. For example, if we are defining a menu file that is going to be used in the `UserActivity`, then the name of the file should be `activity_user.xml`
-
-A good practice is to not include the word `menu` as part of the name because these files are already located in the `menu` directory.
-
-#### 1.2.2.4 Values files
-
-Resource files in the values folder should be __plural__, e.g. `strings.xml`, `styles.xml`, `colors.xml`, `dimens.xml`, `attrs.xml`
-
-# 2 Code guidelines
+# Code guidelines
 
 Ensure that you are using the Android Studio shared settings and if you wish to make any changes ensure that they are discussed and reviewed. This will ensure consistent code between developers. To get the shared settings, download the `android_studio_settings.jar` located in this repositiory, then in Android Studio File -> Import Settings and select the .jar. Then confirm through the messages and Android Studio will need to be restarted for the settings to be applied.
 
 Ensure that you regularly use the Android Studio 'Reformat Code' (ALT+CMD+L) tool which will reformat a file to match your code style settings. This should, as a minimum, be used before a submission is made on every file that you have changed in that submission. This will reduce the code review time and keep the code tidier.
 
-## 2.1 Java language rules
+## 1 Java language rules
 
-### 2.1.1 Don't ignore exceptions
+### 1.1 Don't ignore exceptions
 
 You must never do the following:
 
@@ -94,7 +22,7 @@ _While you may think that your code will never encounter this error condition or
 
 See alternatives [here](https://source.android.com/source/code-style.html#dont-ignore-exceptions).
 
-### 2.1.2 Don't catch generic exception
+### 1.2 Don't catch generic exception
 
 You should not do this:
 
@@ -111,12 +39,12 @@ try {
 
 See the reason why and some alternatives [here](https://source.android.com/source/code-style.html#dont-catch-generic-exception)
 
-### 2.1.3 Don't use finalizers
+### 1.3 Don't use finalizers
 
 _We don't use finalizers. There are no guarantees as to when a finalizer will be called, or even that it will be called at all. In most cases, you can do what you need from a finalizer with good exception handling. If you absolutely need it, define a `close()` method (or the like) and document exactly when that method needs to be called. See `InputStream` for an example. In this case it is appropriate but not required to print a short log message from the finalizer, as long as it is not expected to flood the logs._ - ([Android code style guidelines](https://source.android.com/source/code-style.html#dont-use-finalizers))
 
 
-### 2.1.4 Fully qualify imports
+### 1.4 Fully qualify imports
 
 This is bad: `import foo.*;`
 
@@ -125,9 +53,9 @@ This is good: `import foo.Bar;`
 See more info [here](https://source.android.com/source/code-style.html#fully-qualify-imports)
 Use Android Studio tool by right-click on file then select Optimize Imports. This should, as a minimum, be used before a submission is made on every file that you have changed in that submission.
 
-## 2.2 Java style rules
+## 2 Java style rules
 
-### 2.2.1 Fields definition and naming
+### 2.1 Fields definition and naming
 
 Fields should be defined at the __top of the file__ and they should follow the naming rules listed below.
 
@@ -149,7 +77,7 @@ public class MyClass {
 }
 ```
 
-### 2.2.2 Treat acronyms as words
+### 2.2 Treat acronyms as words
 
 | Good           | Bad            |
 | -------------- | -------------- |
@@ -158,7 +86,7 @@ public class MyClass {
 | `String url`     | `String URL`     |
 | `long id`        | `long ID`        |
 
-### 2.2.3 Use spaces for indentation
+### 2.3 Use spaces for indentation
 
 Use __4 space__ indents for blocks:
 
@@ -175,7 +103,7 @@ Instrument i =
         someLongExpression(that, wouldNotFit, on, one, line);
 ```
 
-### 2.2.4 Use standard brace style
+### 2.4 Use standard brace style
 
 Braces go on the same line as the code before them.
 
@@ -209,9 +137,9 @@ if (condition)
 if (condition) body();  // bad!
 ```
 
-### 2.2.5 Annotations
+### 2.5 Annotations
 
-#### 2.2.5.1 Annotations practices
+#### 2.5.1 Annotations practices
 
 According to the Android code style guide, the standard practices for some of the predefined annotations in Java are:
 
@@ -221,7 +149,7 @@ According to the Android code style guide, the standard practices for some of th
 
 More information about annotation guidelines can be found [here](http://source.android.com/source/code-style.html#use-standard-java-annotations).
 
-#### 2.2.5.2 Annotations style
+#### 2.5.2 Annotations style
 
 __Classes, Methods and Constructors__
 
@@ -242,13 +170,13 @@ Annotations applying to fields should be listed __on the same line__, unless the
 @Nullable @Mock DataManager mDataManager;
 ```
 
-### 2.2.6 Limit variable scope
+### 2.6 Limit variable scope
 
 _The scope of local variables should be kept to a minimum (Effective Java Item 29). By doing so, you increase the readability and maintainability of your code and reduce the likelihood of error. Each variable should be declared in the innermost block that encloses all uses of the variable._
 
 _Local variables should be declared at the point they are first used. Nearly every local variable declaration should contain an initializer. If you don't yet have enough information to initialize a variable sensibly, you should postpone the declaration until you do._ - ([Android code style guidelines](https://source.android.com/source/code-style.html#limit-variable-scope))
 
-### 2.2.7 Order import statements
+### 2.7 Order import statements
 
 If you are using an IDE such as Android Studio, you don't have to worry about this because your IDE is already obeying these rules. If not, have a look below.
 
@@ -266,7 +194,7 @@ To exactly match the IDE settings, the imports should be:
 
 More info [here](https://source.android.com/source/code-style.html#limit-variable-scope)
 
-### 2.2.8 Logging guidelines
+### 2.8 Logging guidelines
 
 Use the logging methods provided by the `Logger` class in the brighteccomponents library to print out error messages or other information that may be useful for developers to identify issues:
 
@@ -280,7 +208,7 @@ Note that the `Logger` class will only log messages if in a DEBUG build.
 
 If you need a custom tag then you can use `(String tag, String msg)` methods, however this should not be the norm.
 
-### 2.2.9 Class member ordering
+### 2.9 Class member ordering
 
 There is no single correct solution for this but using a __logical__ and __consistent__ order will improve code learnability and readability. It is recommendable to use the following order:
 
@@ -341,7 +269,7 @@ public class MainActivity extends Activity {
 }
 ```
 
-### 2.2.10 Parameter ordering in methods
+### 2.10 Parameter ordering in methods
 
 When programming for Android, it is quite common to define methods that take a `Context`. If you are writing a method like this, then the __Context__ must be the __first__ parameter.
 
@@ -357,7 +285,7 @@ public User loadUser(Context context, int userId);
 public void loadUserAsync(Context context, int userId, UserCallback callback);
 ```
 
-### 2.2.11 String constants, naming, and values
+### 2.11 String constants, naming, and values
 
 Many elements of the Android SDK such as `SharedPreferences`, `Bundle`, or `Intent` use a key-value pair approach so it's very likely that even for a small app you end up having to write a lot of String constants.
 
@@ -385,7 +313,7 @@ static final String EXTRA_SURNAME = "EXTRA_SURNAME";
 static final String ACTION_OPEN_USER = "ACTION_OPEN_USER";
 ```
 
-### 2.2.12 Arguments in Fragments and Activities
+### 2.12 Arguments in Fragments and Activities
 
 When data is passed into an `Activity `or `Fragment` via an `Intent` or a `Bundle`, the keys for the different values __must__ follow the rules described in the section above.
 
@@ -417,7 +345,7 @@ __Note 1__: These methods should go at the top of the class before `onCreate()`.
 
 __Note 2__: If we provide the methods described above, the keys for extras and arguments should be `private` because there is no need for them to be exposed outside the class.
 
-### 2.2.13 Line length limit
+### 2.13 Line length limit
 
 Code lines should not exceed __130 characters__. If the line is longer than this limit there are usually two options to reduce its length:
 
@@ -429,7 +357,7 @@ There are two __exceptions__ where it is possible to have lines longer than 130:
 * Lines that are not possible to split, e.g. long URLs in comments.
 * `package` and `import` statements.
 
-#### 2.2.13.1 Line-wrapping strategies
+#### 2.13.1 Line-wrapping strategies
 
 There isn't an exact formula that explains how to line-wrap and quite often different solutions are valid. However there are a few rules that can be applied to common cases.
 
@@ -481,15 +409,15 @@ loadPicture(context,
         "Title of the picture");
 ```
 
-### 2.2.14 Short methods, clear names
+### 2.14 Short methods, clear names
 
 Methods should be short and stick to one function. This makes the code easier to read and test. The method name should reflect clearly what that function is, with more detail included in the Javadoc comment.
 
 [here](https://source.android.com/source/code-style.html#write-short-methods)
 
-## 2.3 XML style rules
+## 3 XML style rules
 
-### 2.3.1 Use self closing tags
+### 3.1 Use self closing tags
 
 When an XML element doesn't have any contents, you __must__ use self closing tags.
 
@@ -514,11 +442,11 @@ This is __bad__ :
 ```
 
 
-### 2.3.2 Resources naming
+### 3.2 Resources naming
 
 Resource IDs and names are written in __lowercase_underscore__.
 
-#### 2.3.2.1 ID naming
+#### 3.2.1 ID naming
 
 IDs should be prefixed with the name of the element in lowercase underscore, not abbreviated. For example:
 
@@ -558,7 +486,7 @@ Menu example:
 </menu>
 ```
 
-#### 2.3.2.2 Strings
+#### 3.2.2 Strings
 
 String names should follow the rules below:
 
@@ -574,11 +502,11 @@ String names should follow the rules below:
 If these rules do not cover your case use a sensible category prefix.
 
 
-#### 2.3.2.3 Styles and Themes
+#### 3.2.3 Styles and Themes
 
 Style and theme names are written in __UpperCamelCase__.
 
-### 2.3.3 Attributes ordering
+### 3.3 Attributes ordering
 
 As a general rule you should try to group similar attributes together. A good way of ordering the most common attributes is:
 
@@ -588,9 +516,9 @@ As a general rule you should try to group similar attributes together. A good wa
 4. Other layout attributes, sorted alphabetically
 5. Remaining attributes, sorted alphabetically
 
-## 2.4 Tests style rules
+## 4 Tests style rules
 
-### 2.4.1 Unit tests
+### 4.1 Unit tests
 
 Test classes should match the name of the class the tests are targeting, followed by `Test`. For example, if we create a test class that contains tests for the `DatabaseHelper`, we should name it `DatabaseHelperTest`.
 
@@ -603,7 +531,7 @@ Precondition and/or expected behaviour may not always be required if the test is
 
 Sometimes a class may contain a large amount of methods, that at the same time require several tests for each method. In this case, it's recommendable to split up the test class into multiple ones. For example, if the `DataManager` contains a lot of methods we may want to divide it into `DataManagerSignInTest`, `DataManagerLoadUsersTest`, etc. Generally you will be able to see what tests belong together because they have common [test fixtures](https://en.wikipedia.org/wiki/Test_fixture).
 
-### 2.4.2 Espresso tests
+### 4.2 Espresso tests
 
 Every Espresso test class usually targets an Activity, therefore the name should match the name of the targeted Activity followed by `Test`, e.g. `SignInActivityTest`
 
@@ -615,11 +543,11 @@ onView(withId(R.id.view))
         .check(matches(isDisplayed()))
 ```
 
-## 2.5 Comments
+## 5 Comments
 
 You should be extensively using comments to help explain to the reader what your code was intending to do. This helps other readers understand your code and spot mistakes. As a minimum any public methods should have comments attached explaining what that method does. [Javadoc info](https://source.android.com/source/code-style.html#use-javadoc-standard-comments)
 
-### 2.5.1 Todo's
+### 5.1 Todo's
 
 The use of todo's is encouraged and can be very useful if used correctly. All todo's should adhear to the following format:  
 `{Type} : {Name} {Date} : {Msg}`  
@@ -628,26 +556,26 @@ For example, in Java:
 
 These formats are included in the Android Studio shared settings.
 
-#### 2.5.1.1 TODO
+#### 5.1.1 TODO
 
 TODO should be used when you have a task which needs to be completed.
 
-#### 2.5.1.2 FIXME
+#### 5.1.2 FIXME
 
 FIXME should be used when the code which has been written needs fixing.
 
-#### 2.5.1.3 IMPROVE
+#### 5.1.3 IMPROVE
 
 IMPROVE should be used when you recognise that the code is working but could be made more efficient.
 
-#### 2.5.1.4 STOPSHIP
+#### 5.1.4 STOPSHIP
 
 STOPSHIP should be used to mark something which absolutely cannot go out in a release build.
 
 # License
 
 ```
-Copyright 2016 Brightec Ltd.
+Copyright 2018 Brightec Ltd.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
