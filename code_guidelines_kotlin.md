@@ -27,6 +27,7 @@ This style-guide is somewhat of a mash-up between the existing Kotlin language s
   + [Classes](#classes)
   + [Data Type Objects](#data-type-objects)
   + [Enum Classes](#enum-classes)
+- [Function Calling](#function-calling)
 - [Spacing](#spacing)
   + [Indentation](#indentation)
   + [Line Length](#line-length)
@@ -189,6 +190,24 @@ Enum classes without methods may be formatted without line-breaks, as follows:
 ```kotlin
 private enum CompassDirection { EAST, NORTH, WEST, SOUTH }
 ```
+
+## Function Calling
+
+When calling any method with more than 2 parameters, you must make use of the named parameters language feature.
+
+__BAD:__
+
+```kotlin
+myFunction(1, true, ourString)
+```
+
+__GOOD:__
+
+```kotlin
+myFunction(parameterSize = 1, isNecessary = true, name = ourString)
+```
+
+It is not considered bad practice either way for functions of 2 parameters or less.
 
 ## Spacing
 
