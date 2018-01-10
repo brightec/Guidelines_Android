@@ -193,7 +193,7 @@ private enum CompassDirection { EAST, NORTH, WEST, SOUTH }
 
 ## Function Calling
 
-When calling any method with more than 2 parameters, you must make use of the named parameters language feature.
+When calling any function (not possible when calling java functions) with more than 2 parameters, you must make use of the named parameters language feature.
 
 __BAD:__
 
