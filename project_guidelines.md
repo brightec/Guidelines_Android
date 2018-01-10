@@ -1,5 +1,17 @@
 # Project guidelines
 
+## Table of Contents
+
+- [1 Project structure](#1-project-structure)
+- [2 File naming](#2-file-naming)
+  + [2.1 Class files](#21-class-files)
+  + [2.2 Resources files](#22-resources-files)
+    + [2.2.1 Drawable files](#221-drawable-files)
+    + [2.2.2 Layout files](#222-layout-files)
+    + [2.2.3 Menu files](#223-menu-files)
+    + [2.2.4 Values files](#224-values-files)
+- [License](#license)
+
 ## 1 Project structure
 
 New projects should follow the Android Gradle project structure that is defined on the [Android Gradle plugin user guide](http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Project-Structure).
