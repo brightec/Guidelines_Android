@@ -29,22 +29,15 @@ Ensure that you regularly use the Android Studio 'Reformat Code' (ALT+CMD+L) too
   + [2.13 Line length limit](#213-line-length-limit)
     + [2.13.1 Line-wrapping strategies](#2131-line-wrapping-strategies)
   + [2.14 Short methods, clear names](#214-short-methods-clear-names)
-- [3 XML style rules](#3-xml-style-rules)
-  + [3.1 Use self closing tags](#31-use-self-closing-tags)
-  + [3.2 Resources naming](#32-resources-naming)
-    + [3.2.1 ID naming](#321-id-naming)
-    + [3.2.2 Strings](#322-strings)
-    + [3.2.3 Styles and Themes](#323-styles-and-themes)
-  + [3.3 Attributes ordering](#33-attributes-ordering)
-- [4 Tests style rules](#4-tests-style-rules)
-  + [4.1 Unit tests](#41-unit-tests)
-  + [4.2 Espresso tests](#42-espresso-tests)
-- [5 Comments](#5-comments)
-  + [5.1 Todo's](#51-todos)
-    + [5.1.1 TODO](#511-todo)
-    + [5.1.2 FIXME](#512-fixme)
-    + [5.1.3 IMPROVE](#513-improve)
-    + [5.1.4 STOPSHIP](#514-stopship)
+- [3 Tests style rules](#3-tests-style-rules)
+  + [3.1 Unit tests](#31-unit-tests)
+  + [3.2 Espresso tests](#32-espresso-tests)
+- [4 Comments](#4-comments)
+  + [4.1 Todo's](#41-todos)
+    + [4.1.1 TODO](#411-todo)
+    + [4.1.2 FIXME](#412-fixme)
+    + [4.1.3 IMPROVE](#413-improve)
+    + [4.1.4 STOPSHIP](#414-stopship)
 - [License](#license)
 
 ## 1 Java language rules
@@ -458,110 +451,9 @@ Methods should be short and stick to one function. This makes the code easier to
 
 [here](https://source.android.com/source/code-style.html#write-short-methods)
 
-## 3 XML style rules
+## 3 Tests style rules
 
-### 3.1 Use self closing tags
-
-When an XML element doesn't have any contents, you __must__ use self closing tags.
-
-This is good:
-
-```xml
-<TextView
-	android:id="@+id/text_view_profile"
-	android:layout_width="wrap_content"
-	android:layout_height="wrap_content" />
-```
-
-This is __bad__ :
-
-```xml
-<!-- Don\'t do this! -->
-<TextView
-    android:id="@+id/text_view_profile"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content" >
-</TextView>
-```
-
-
-### 3.2 Resources naming
-
-Resource IDs and names are written in __lowercase_underscore__.
-
-#### 3.2.1 ID naming
-
-IDs should be prefixed with the name of the element in lowercase underscore, not abbreviated. For example:
-
-| Element            | Prefix            |
-| -----------------  | ----------------- |
-| `TextView`           | `text_`             |
-| `ImageView`          | `image_`            |
-| `Button`             | `button_`           |
-| `Menu`               | `menu_`             |
-| `Relative`               | `relative_`             |
-| `Linear`               | `linear_`             |
-
-Some exceptions may apply, for example:
-
-| Element            | Prefix            |
-| -----------------  | ----------------- |
-| `EditText`          | `edit_`            |
-| `FloatingActionButton`          | `fab_`            |
-| `RadioButton`             | `radio_`           |
-
-Image view example:
-
-```xml
-<ImageView
-    android:id="@+id/image_profile"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content" />
-```
-
-Menu example:
-
-```xml
-<menu>
-	<item
-        android:id="@+id/menu_done"
-        android:title="Done" />
-</menu>
-```
-
-#### 3.2.2 Strings
-
-String names should follow the rules below:
-
-
-| Prefix             | Description                           |
-| -----------------  | --------------------------------------|
-| `error_`             | An error message                      |
-| `title_`             | A title, i.e. a dialog title or activity title          |
-| `action_`            | An action such as "Save" or "Create"  |
-| `label_`            | A label for input field  |
-| `hint_`            | A hint for an edit text  |
-
-If these rules do not cover your case use a sensible category prefix.
-
-
-#### 3.2.3 Styles and Themes
-
-Style and theme names are written in __UpperCamelCase__.
-
-### 3.3 Attributes ordering
-
-As a general rule you should try to group similar attributes together. A good way of ordering the most common attributes is:
-
-1. View Id
-2. Style
-3. Layout width and layout height
-4. Other layout attributes, sorted alphabetically
-5. Remaining attributes, sorted alphabetically
-
-## 4 Tests style rules
-
-### 4.1 Unit tests
+### 3.1 Unit tests
 
 Test classes should match the name of the class the tests are targeting, followed by `Test`. For example, if we create a test class that contains tests for the `DatabaseHelper`, we should name it `DatabaseHelperTest`.
 
@@ -574,7 +466,7 @@ Precondition and/or expected behaviour may not always be required if the test is
 
 Sometimes a class may contain a large amount of methods, that at the same time require several tests for each method. In this case, it's recommendable to split up the test class into multiple ones. For example, if the `DataManager` contains a lot of methods we may want to divide it into `DataManagerSignInTest`, `DataManagerLoadUsersTest`, etc. Generally you will be able to see what tests belong together because they have common [test fixtures](https://en.wikipedia.org/wiki/Test_fixture).
 
-### 4.2 Espresso tests
+### 3.2 Espresso tests
 
 Every Espresso test class usually targets an Activity, therefore the name should match the name of the targeted Activity followed by `Test`, e.g. `SignInActivityTest`
 
@@ -586,11 +478,11 @@ onView(withId(R.id.view))
         .check(matches(isDisplayed()))
 ```
 
-## 5 Comments
+## 4 Comments
 
 You should be extensively using comments to help explain to the reader what your code was intending to do. This helps other readers understand your code and spot mistakes. As a minimum any public methods should have comments attached explaining what that method does. [Javadoc info](https://source.android.com/source/code-style.html#use-javadoc-standard-comments)
 
-### 5.1 Todo's
+### 4.1 Todo's
 
 The use of todo's is encouraged and can be very useful if used correctly. All todo's should adhear to the following format:  
 `{Type} : {Name} {Date} : {Msg}`  
@@ -599,19 +491,19 @@ For example, in Java:
 
 These formats are included in the Android Studio shared settings.
 
-#### 5.1.1 TODO
+#### 4.1.1 TODO
 
 TODO should be used when you have a task which needs to be completed.
 
-#### 5.1.2 FIXME
+#### 4.1.2 FIXME
 
 FIXME should be used when the code which has been written needs fixing.
 
-#### 5.1.3 IMPROVE
+#### 4.1.3 IMPROVE
 
 IMPROVE should be used when you recognise that the code is working but could be made more efficient.
 
-#### 5.1.4 STOPSHIP
+#### 4.1.4 STOPSHIP
 
 STOPSHIP should be used to mark something which absolutely cannot go out in a release build.
 
