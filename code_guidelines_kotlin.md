@@ -1,14 +1,6 @@
-# The Official raywenderlich.com Kotlin Style Guide (in progress)
+# Code guidelines
 
-This style guide is different from others you may see, because the focus is centered on readability for print and the web. We created this style guide to keep the code in our tutorials consistent.
-
-Our overarching goals are __conciseness__, __readability__ and __simplicity__.
-
-You should also check out our other style guides:
-
-* [Swift](https://github.com/raywenderlich/swift-style-guide)
-* [Objective-C](https://github.com/raywenderlich/objective-c-style-guide)
-* [Java](https://github.com/raywenderlich/java-style-guide)
+Ensure that you regularly use the Android Studio 'Reformat Code' (ALT+CMD+L) tool which will reformat a file to match your code style settings. This should, as a minimum, be used before a submission is made on every file that you have changed in that submission. This will reduce the code review time and keep the code tidier.
 
 ## Inspiration
 
@@ -18,30 +10,7 @@ This style-guide is somewhat of a mash-up between the existing Kotlin language s
 - The [Kotlin Coding Conventions](https://kotlinlang.org/docs/reference/coding-conventions.html) 
 - The [Android contributors style guide](https://source.android.com/source/code-style.html)
 - The [Google Java Style Guide](https://google-styleguide.googlecode.com/svn/trunk/javaguide.html).
-
-Alterations to support additional readability in tutorials were inspired by the [raywenderlich.com Swift style guide](https://github.com/raywenderlich/swift-style-guide).
-
-## Android Studio Coding Style
-
-It is possible to get Android Studio to adhere to these style guidelines, via a rather complex sequence of menus. To make it easier, we've provided a coding style that can be imported into Android Studio.
-
-First, clone this repository and run `install.sh` (**UPDATED FILE COMING SOON**).
-
-Then, open Android Studio. To set this codestyle as the default, select
-__File > Other Settings > Default Settings...__:
-
-**UPDATED IMAGE COMING SOON**
-
-![Default Settings](resources/default_settings.png)
-
-In __Editor > Code Style__, choose the __Scheme__ to be __raywenderlich.com__:
-
-**UPDATED IMAGE COMING SOON**
-
-![Setting the Scheme](resources/setting_scheme.png)
-
-From now on, projects you create _should_ follow the correct style guidelines.
-
+- The [Raywenderlich Guide](https://github.com/raywenderlich/kotlin-style-guide)
 
 ## Table of Contents
 
@@ -72,12 +41,9 @@ From now on, projects you create _should_ follow the correct style guidelines.
   + [Constants vs. Variables](#constants-vs-variables)
   + [Companion Objects](#companion-objects)
   + [Optionals](#optionals)
-- [XML Guidance](#xml-guidance)
 - [Language](#language)
 - [Copyright Statement](#copyright-statement)
 - [Smiley Face](#smiley-face)
-- [Credit](#credits)
-
 
 ## Nomenclature
 
@@ -491,11 +457,6 @@ if let unwrappedSubview = optionalSubview {
 }
 ``` 
 
-## XML Guidance
-
-Since Android uses XML extensively in addition to Kotlin and Java, we have some rules specific to XML. These can be found in our [Java code standards](https://github.com/raywenderlich/java-style-guide#xml-guidance
-
-
 ## Language
 
 Use `en-US` English spelling. 🇺🇸
@@ -557,10 +518,6 @@ Bad:
 Good:
 
     :]
-
-## Credits
-
-This style guide is was resourced primarily from [raywenderlich](https://github.com/raywenderlich/kotlin-style-guide)
 
 ## License
 
