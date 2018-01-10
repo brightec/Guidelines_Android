@@ -572,7 +572,7 @@ IMPROVE should be used when you recognise that the code is working but could be 
 
 STOPSHIP should be used to mark something which absolutely cannot go out in a release build.
 
-# License
+## License
 
 ```
 Copyright 2018 Brightec Ltd.
