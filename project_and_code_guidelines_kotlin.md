@@ -560,13 +560,4 @@ Good:
 
 ## Credits
 
-This style guide is a collaborative effort from the most stylish
-raywenderlich.com team members:
-
-- [Darryl Bayliss](https://github.com/DarrylBayliss)
-- [Tom Blankenship](https://github.com/tgblank)
-- [Sam Davies](https://github.com/sammyd)
-- [Mic Pringle](https://github.com/micpringle)
-- [Ellen Shapiro](https://github.com/designatednerd)
-- [Ray Wenderlich](https://github.com/rwenderlich)
-- [Joe Howard](https://github.com/orionthwake)
+This style guide is was resourced primarily from [raywenderlich](https://github.com/raywenderlich/kotlin-style-guide)
