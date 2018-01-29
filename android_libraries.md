@@ -1,5 +1,14 @@
 # Android Libraries
 
+## Table of Contents
+
+- [Standard Test Libraries](#standard-test-libraries)
+- [Standard Libraries](#standard-libraries)
+  + [Architecture](#architecture)
+  + [Networking](#networking)
+  + [Views](#views)
+- [License](#license)
+
 ## Standard Test Libraries
 
  - JUnit
@@ -9,8 +18,10 @@
 
 ## Standard Libraries
 
+For a list of other useful libraries visit [android arsenal](http://android-arsenal.com)
+
 ### Architecture
-- [Requery](https://github.com/requery/requery) - Database
+- [Room](https://developer.android.com/topic/libraries/architecture/room.html) - Database
 
 ### Networking
 - [Okhttp](http://square.github.io/okhttp/) - Http requests
@@ -20,7 +31,6 @@
 ### Views
 
 
-For a list of other useful libraries visit [android arsenal](http://android-arsenal.com). Also see internal spreadsheet (DevLibraries.gsheet) for previously used libraries.
 
 ## License
 
