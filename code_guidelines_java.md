@@ -1,7 +1,5 @@
 # Code guidelines
 
-Ensure that you are using the Android Studio shared settings and if you wish to make any changes ensure that they are discussed and reviewed. This will ensure consistent code between developers. To get the shared settings, download the `android_studio_settings.jar` located in this repositiory, then in Android Studio File -> Import Settings and select the .jar. Then confirm through the messages and Android Studio will need to be restarted for the settings to be applied.
-
 Ensure that you regularly use the Android Studio 'Reformat Code' (ALT+CMD+L) tool which will reformat a file to match your code style settings. This should, as a minimum, be used before a submission is made on every file that you have changed in that submission. This will reduce the code review time and keep the code tidier.
 
 ## Table of Contents
