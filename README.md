@@ -6,7 +6,6 @@ List of guidelines and libraries that we use at __brightec__ when developing for
 * [Java - Code Guidelines](code_guidelines_java.md)
 * [Kotlin - Code Guidelines](code_guidelines_kotlin.md)
 * [XML - Code Guidelines](code_guidelines_xml.md)
-* [Libraries](android_libraries.md)
 
 android_studio_settings.jar is out of date. Ask for it to be updated if required
 
