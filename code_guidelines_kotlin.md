@@ -4,13 +4,7 @@ Ensure that you regularly use the Android Studio 'Reformat Code' (ALT+CMD+L) too
 
 ## Inspiration
 
-This style-guide is somewhat of a mash-up between the existing Kotlin language style guides, and a tutorial-readability focused Swift style-guide. The language guidance is drawn from: 
-
-- The [Android Kotlin style guide](https://android.github.io/kotlin-guides/style.html)
-- The [Kotlin Coding Conventions](https://kotlinlang.org/docs/reference/coding-conventions.html) 
-- The [Android contributors style guide](https://source.android.com/source/code-style.html)
-- The [Google Java Style Guide](https://google-styleguide.googlecode.com/svn/trunk/javaguide.html).
-- The [Raywenderlich Guide](https://github.com/raywenderlich/kotlin-style-guide)
+This style-guide is like for like with the [Raywenderlich Guide](https://github.com/raywenderlich/kotlin-style-guide), with a few minor tweaks. So please check that out.
 
 ## Table of Contents
 
