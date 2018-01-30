@@ -4,7 +4,7 @@ Ensure that you regularly use the Android Studio 'Reformat Code' (ALT+CMD+L) too
 
 ## Inspiration
 
-This style-guide is like for like with the [Raywenderlich Guide](https://github.com/raywenderlich/kotlin-style-guide), with a few minor tweaks. So please check that out.
+This style-guide is like for like with the [Raywenderlich Guide](https://github.com/raywenderlich/kotlin-style-guide), with a few minor tweaks. So please check that out. The [Android Kotlin Guides](https://android.github.io/kotlin-guides/) are another great source for styling.
 
 ## Table of Contents
 
