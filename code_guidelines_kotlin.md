@@ -206,7 +206,7 @@ It is not considered bad practice either way for functions of 2 parameters or le
 
 The same style should be applied to constructor invocation too.
 
-Exception: Classes which represent tuples (e.g. Triple), do not need to be invoked using named parameters. This is because they provide no clarity and the invokation should always be done in order regardless.
+Exception: Classes which represent tuples (e.g. Triple), do not need to be invoked using named parameters. This is because they provide no clarity and the invocation should always be done in order regardless.
 E.g. ```Triple(objA, objB, objC)``` NOT ```Triple(first = objA, second = objB, third = objC)```
 
 ## Lambdas
