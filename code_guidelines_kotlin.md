@@ -22,6 +22,7 @@ This style-guide is like for like with the [Raywenderlich Guide](https://github.
   + [Data Type Objects](#data-type-objects)
   + [Enum Classes](#enum-classes)
 - [Named Parameters](#named-parameters)
+- [Lambdas](#lambdas)
 - [Spacing](#spacing)
   + [Indentation](#indentation)
   + [Line Length](#line-length)
@@ -208,6 +209,36 @@ The same style should be applied to constructor invocation too.
 Exception: Classes which represent tuples (e.g. Triple), do not need to be invoked using named parameters. This is because they provide no clarity and the invokation should always be done in order regardless.
 E.g. ```Triple(objA, objB, objC)``` NOT ```Triple(first = objA, second = objB, third = objC)```
 
+## Lambdas
+
+When using lambdas, naming of parameters is required when:
+- More than one parameter is present or;
+- When nesting within the lamdba. 
+
+```it``` can become unclear when its not the simpliest case. Use good judgement to make sure your ```it``` is clear enough, otherwise name it.
+
+__BAD:__
+
+```kotlin
+list.forEach {
+    list2.forEach {
+        //some code
+    }
+}
+```
+
+__GOOD:__
+
+```kotlin
+list.forEach { item1 ->
+    list2.forEach { item2 ->
+        //some code
+    }
+}
+```
+
+The use of ```_``` is encouraged for parameters which are not going to be used. This helps a reader understand that you had no intention of using that parameter, as opposed to not using it by mistake.
+
 ## Spacing
 
 Spacing is especially important in raywenderlich.com code, as code needs to be easily readable as part of the tutorial. 
@@ -256,7 +287,7 @@ val widget: CoolUiWidget =
 
 ### Line Length
 
-Lines should be no longer than 100 characters long.
+Lines should be no longer than 130 characters long.
 
 
 ### Vertical Spacing
