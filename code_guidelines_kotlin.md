@@ -10,7 +10,7 @@ Any deviations from this guide should documented here.
 
 ### Auto formatting
 
-Ensure that you regularly use the Android Studio 'Reformat Code' (ALT+CMD+L) tool which will reformat a file to match your code style settings. This should, as a minimum, be used before a submission is made on every file that you have changed in that submission. This will reduce the code review time and keep the code tidier.
+Ensure that you regularly use the Android Studio 'Reformat Code' (ALT+CMD+L) tool which will reformat a file to match your code style settings. This should, as a minimum, be used before a submission is made on every file that you have changed in that submission. It is possible to set Android Studio to automatically run this, on file save.
 
 ### Static Analysis
 
@@ -67,8 +67,10 @@ It is not considered bad practice either way for functions of 2 parameters or le
 
 The same style should be applied to constructor invocation too.
 
-Exception: Classes which represent tuples (e.g. Triple), do not need to be invoked using named parameters. This is because they provide no clarity and the invocation should always be done in order regardless.
+Exception: Classes which represent tuples (e.g. Triple) or lists (e.g. listOf()), do not need to be invoked using named parameters. This is because they provide no clarity and the invocation should always be done in order regardless.
 E.g. ```Triple(objA, objB, objC)``` NOT ```Triple(first = objA, second = objB, third = objC)```
+
+Exception: If all parameters being passed are identical then naming is not required, however is encouraged if it brings extra clarity. E.g. ```repo.someMethod(any(), any(), any())``` is acceptable. ```repo.someMethod(shouldBe1, 1, 1)``` is not.
 
 ### Lambdas
 
@@ -97,6 +99,8 @@ list.forEach { item1 ->
     }
 }
 ```
+
+Note that the use of a named parameter on the inner most lambda is not required. However the same judgement should be used to ensure code clarity.
 
 The use of ```_``` is encouraged for parameters which are not going to be used. This helps a reader understand that you had no intention of using that parameter, as opposed to not using it by mistake.
 
