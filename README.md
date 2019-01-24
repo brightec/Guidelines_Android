@@ -1,11 +1,13 @@
 # Android Guidelines and Tools
 
-List of guidelines and libraries that we use at __brightec__ when developing for the __Android__ platform. 
+List of guidelines and libraries that we use at __brightec__ when developing for the __Android__ platform.
 
 * [Project Guidelines](project_guidelines.md)
 * [Java - Code Guidelines](code_guidelines_java.md)
 * [Kotlin - Code Guidelines](code_guidelines_kotlin.md)
 * [XML - Code Guidelines](code_guidelines_xml.md)
+
+We have some quality configuration we use. See [here](/config). This should be copied into every Android project.
 
 android_studio_settings.jar is out of date. Ask for it to be updated if required
 
