@@ -49,7 +49,6 @@ IDs should be prefixed with the name of the element in lowercase underscore, not
 | `TextView`           | `text_`             |
 | `ImageView`          | `image_`            |
 | `Button`             | `button_`           |
-| `Menu`               | `menu_`             |
 | `Relative`               | `relative_`             |
 | `Linear`               | `linear_`             |
 
@@ -68,16 +67,6 @@ Image view example:
     android:id="@+id/image_profile"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content" />
-```
-
-Menu example:
-
-```xml
-<menu>
-	<item
-        android:id="@+id/menu_done"
-        android:title="Done" />
-</menu>
 ```
 
 ### 2.2 Strings
