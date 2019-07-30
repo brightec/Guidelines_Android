@@ -2,7 +2,7 @@
 
 ## Guidelines
 
-We adhere to the [Android Kotlin Guides](https://android.github.io/kotlin-guides/) for our code style. These represent Google's Android coding standards for Kotlin source code. As such we intend to adopt them.
+We adhere to the [Android Kotlin Guides](https://developer.android.com/kotlin/style-guide) for our code style. These represent Google's Android coding standards for Kotlin source code. As such we intend to adopt them.
 
 Any deviations from this guide should documented here.
 
