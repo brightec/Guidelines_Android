@@ -10,7 +10,7 @@
 # Keep annotations
 -keepattributes *Annotation*
 
-#Put in place to ensure crashlytics gets good reports - see https://docs.fabric.io/android/crashlytics/dex-and-proguard.html
+# Put in place to ensure crashlytics gets good reports - see https://docs.fabric.io/android/crashlytics/dex-and-proguard.html
 -keepattributes *Annotation*
 -keepattributes SourceFile,LineNumberTable
 -keep class com.crashlytics.** { *; }
@@ -27,8 +27,4 @@
 -keep class com.google.firebase.iid.R { *; }
 
 ####### Project Specific #######
-
-# Some methods are only called from tests, so make sure the shrinker keeps them.
--keep class uk.co.brightec.aaincomecalc.** { *; }
-
--keep class android.databinding.** { *; }
+-keep class com.example.** { *; }
