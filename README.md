@@ -11,6 +11,7 @@ List of guidelines and libraries that we use at __brightec__ when developing for
 * [Java - Code Guidelines](code_guidelines_java.md)
 * [Kotlin - Code Guidelines](code_guidelines_kotlin.md)
 * [XML - Code Guidelines](code_guidelines_xml.md)
+* [Logging](logging.md)
 
 We have some quality configuration we use. See [/config](/config). This should be copied into every Android project.
 
