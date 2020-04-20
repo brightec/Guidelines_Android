@@ -107,7 +107,7 @@ We use [XMLCheck_CLI](https://github.com/brightec/XmlCheck_CLI) to help adhere t
 ## License
 
 ```
-Copyright 2018 Brightec Ltd.
+Copyright 2020 Brightec Ltd.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
