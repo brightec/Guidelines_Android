@@ -15,8 +15,6 @@ List of guidelines and libraries that we use at __brightec__ when developing for
 
 Internally we use [Config_Android](https://github.com/brightec/Config_Android) _(internal use only)_. This should added to  every Android project.
 
-android_studio_settings.jar is out of date. Ask for it to be updated if required
-
 # License
 
 ```
