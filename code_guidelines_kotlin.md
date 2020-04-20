@@ -16,31 +16,11 @@ Ensure that you regularly use the Android Studio 'Reformat Code' (ALT+CMD+L) too
 
 We use [detekt](https://github.com/arturbosch/detekt) and [ktlint](https://ktlint.github.io/) to support our coding styles. These have been configured in accordance with the guide.
 
-Note: See [ktlint-rules](https://github.com/brightec/ktlint-rules_Kotlin) for our custom rules.
+Note: See [ktlint-rules](https://github.com/brightec/ktlint-rules_Kotlin) for our custom rules. _(internal use only)_
 
 #### Integration
 
-To integrate these tools you should, copy the "config" folder into the project:
-```
--config
-  -misc
-    -apknaming.gradle
-  -quality
-    -detekt
-      detekt-config.yml
-    -ktlint
-      -libs
-        ktlint-rules-[version].jar
-    lint.xml
-    quality.gradle
-  proguard-rules.pro
-  proguardTest-rules.pro
-```
-Then you can use commands:
-* ```./gradlew ktlint``` - to run a variety of checks
-* ```./gradlew ktlintFormat``` - to run an automatic formatter (limited implementation, but helpful)
-* ```./gradlew detekt``` - to run a variety of checks
-* ```./gradlew check``` - to run both ktlint, detekt, lint and tests
+See [Config_Android](https://github.com/brightec/Config_Android) _(internal use only)_
 
 ## Addendum
 
@@ -107,7 +87,7 @@ The use of ```_``` is encouraged for parameters which are not going to be used. 
 ## License
 
 ```
-Copyright 2018 Brightec Ltd.
+Copyright 2020 Brightec Ltd.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
