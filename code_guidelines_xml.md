@@ -9,6 +9,7 @@
   + [2.2 Strings](#22-strings)
   + [2.3 Styles and Themes](#23-styles-and-themes)
 - [3 Attributes ordering](#3-attributes-ordering)
+- [Implementation](#implementation)
 - [License](#license)
 
 ## 1 Use self closing tags
@@ -98,6 +99,10 @@ As a general rule you should try to group similar attributes together. A good wa
 3. Layout width and layout height
 4. Other layout attributes, sorted alphabetically
 5. Remaining attributes, sorted alphabetically
+
+## Implementation
+
+We use [XMLCheck_CLI](https://github.com/brightec/XmlCheck_CLI) to help adhere to these guidelines. This can be added to a project though [Config_Android](https://github.com/brightec/Config_Android) _(internal use only)_.
 
 ## License
 
