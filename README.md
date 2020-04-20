@@ -13,7 +13,7 @@ List of guidelines and libraries that we use at __brightec__ when developing for
 * [XML - Code Guidelines](code_guidelines_xml.md)
 * [Logging](logging.md)
 
-We have some quality configuration we use. See [/config](/config). This should be copied into every Android project.
+Internally we use [Config_Android](https://github.com/brightec/Config_Android) _(internal use only)_. This should added to  every Android project.
 
 android_studio_settings.jar is out of date. Ask for it to be updated if required
 
