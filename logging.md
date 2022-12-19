@@ -70,7 +70,9 @@ open class ExpectedException(
 
 #### Tracking non-fatals
 
-Typically we add a function to some sort of `AnalyticsManager` to aid in non-fatal logging:
+Typically we might add a library like [Napier](https://github.com/AAkira/Napier) to aid with logging. This can also be customised to send non fatal exceptions to Firebase with a [CrashlyticsAntilog](https://github.com/AAkira/Napier/blob/master/android/src/main/java/io/github/aakira/napier/sample/CrashlyticsAntilog.kt).
+
+Otherwise we could add a function to some sort of `AnalyticsManager` to aid in non-fatal logging:
 
 ```kotlin
 fun trackException(throwable: Throwable, clazz: KClass<*>?, log: Boolean = BuildConfig.DEBUG) {
@@ -195,4 +197,3 @@ We use [Firebase](https://firebase.google.com/docs/perf-mon) to help with perfor
 ## Other links
 
 - https://firebase.google.com/docs/analytics/extend-with-functions
-- https://firebase.google.com/docs/crashlytics/extend-with-cloud-functions

@@ -7,7 +7,7 @@
   + [2.1 Class files](#21-class-files)
   + [2.2 Resources files](#22-resources-files)
     + [2.2.1 Drawable files](#221-drawable-files)
-    + [2.2.2 Layout files](#222-layout-files)
+    + [2.2.2 XML Layout files](#222-xml-layout-files)
     + [2.2.3 Menu files](#223-menu-files)
     + [2.2.4 Values files](#224-values-files)
 - [License](#license)
@@ -32,15 +32,15 @@ Resources file names are written in __lowercase_underscore__.
 Naming conventions for drawables:
 
 
-| Asset Type   | Prefix            |		Example               |
-|--------------| ------------------|-----------------------------|
-| Background   | `bg_`             | `bg_screen1.9.png`          |
-| Button       | `btn_`	            | `btn_send_pressed.9.png`    |
-| Icon         | `ic_`	            | `ic_star.png`               |
+| Asset Type   | Prefix         |		Example              |
+|--------------| ---------------|-----------------------------|
+| Background   | `bg_`          | `bg_screen1.9.png`          |
+| Icon         | `ic_`          | `ic_star_black_24dp.png`    |
+| Image        | `img_`         | `img_star_48x32dp.png`      |
 
 __All icons should follow `ic_{{name}}_{{color}}_{{size}}dp`__. See [Material Icons Guide](https://google.github.io/material-design-icons/).
 
-Note: Occasionally color won't be applicable, in which case don't include it. If the resource isn't square, provide the width.
+Note: Occasionally color won't be applicable, in which case don't include it. If the resource isn't square, provide the widthxheight.
 
 Naming conventions for selector states:
 
@@ -53,20 +53,20 @@ Naming conventions for selector states:
 | Selected     | `_selected`     | `btn_order_selected.9.png`  |
 
 
-#### 2.2.2 Layout files
+#### 2.2.2 XML Layout files
 
 Layout files should match the name of the Android components that they are intended for but moving the top level component name to the beginning. For example, if we are creating a layout for the `SignInActivity`, the name of the layout file should be `activity_sign_in.xml`.
 
 | Component        | Class Name             | Layout Name                   |
 | ---------------- | ---------------------- | ----------------------------- |
 | Activity         | `UserProfileActivity`  | `activity_user_profile.xml`   |
-| Activity Content         | `UserProfileActivity`  | `content_user_profile.xml`   |
+| Activity Content | `UserProfileActivity`  | `content_user_profile.xml`    |
 | Fragment         | `SignUpFragment`       | `fragment_sign_up.xml`        |
 | Dialog           | `ChangePasswordDialog` | `dialog_change_password.xml`  |
 | AdapterView item | ---                    | `item_person.xml`             |
 | Partial layout   | ---                    | `partial_stats_bar.xml`       |
 
-Note that Activity refers to the layout for the activity which will include the  appbar, any view that overlays the main content and the content container.
+Note that Activity refers to the layout for the activity which will include the appbar, any view that overlays the main content and the content container.
 
 A slightly different case is when we are creating a layout that is going to be inflated by an `Adapter`, e.g to populate a `ListView`. In this case, the name of the layout should start with `item_`.
 
@@ -85,7 +85,7 @@ Resource files in the values folder should be __plural__, e.g. `strings.xml`, `s
 ## License
 
 ```
-Copyright 2018 Brightec Ltd.
+Copyright 2022 Brightec Ltd.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

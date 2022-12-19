@@ -508,7 +508,7 @@ STOPSHIP should be used to mark something which absolutely cannot go out in a re
 ## License
 
 ```
-Copyright 2018 Brightec Ltd.
+Copyright 2022 Brightec Ltd.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

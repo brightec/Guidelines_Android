@@ -36,7 +36,6 @@ This is __bad__ :
 </TextView>
 ```
 
-
 ## 2 Resources naming
 
 Resource IDs and names are written in __lowercase_underscore__.
@@ -47,19 +46,19 @@ IDs should be prefixed with the name of the element in lowercase underscore, not
 
 | Element            | Prefix            |
 | -----------------  | ----------------- |
-| `TextView`           | `text_`             |
-| `ImageView`          | `image_`            |
-| `Button`             | `button_`           |
-| `Relative`               | `relative_`             |
-| `Linear`               | `linear_`             |
+| `TextView`         | `text_`           |
+| `ImageView`        | `image_`          |
+| `Button`           | `button_`         |
+| `Relative`         | `relative_`       |
+| `Linear`           | `linear_`         |
 
 Some exceptions may apply, for example:
 
-| Element            | Prefix            |
-| -----------------  | ----------------- |
-| `EditText`          | `edit_`            |
-| `FloatingActionButton`          | `fab_`            |
-| `RadioButton`             | `radio_`           |
+| Element                | Prefix            |
+| ---------------------  | ----------------- |
+| `EditText`             | `edit_`           |
+| `FloatingActionButton` | `fab_`            |
+| `RadioButton`          | `radio_`          |
 
 Image view example:
 
@@ -85,7 +84,6 @@ String names should follow the rules below:
 
 If these rules do not cover your case use a sensible category prefix.
 
-
 ### 2.3 Styles and Themes
 
 Style and theme names are written in __UpperCamelCase__.
@@ -102,12 +100,12 @@ As a general rule you should try to group similar attributes together. A good wa
 
 ## Implementation
 
-We use [XMLCheck_CLI](https://github.com/brightec/XmlCheck_CLI) to help adhere to these guidelines. This can be added to a project though [Config_Android](https://github.com/brightec/Config_Android) _(internal use only)_.
+We use [XMLCheck_CLI](https://github.com/brightec/XmlCheck_CLI) to help adhere to these guidelines.
 
 ## License
 
 ```
-Copyright 2020 Brightec Ltd.
+Copyright 2022 Brightec Ltd.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

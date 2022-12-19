@@ -18,10 +18,6 @@ We use [detekt](https://github.com/arturbosch/detekt) and [ktlint](https://ktlin
 
 Note: See [ktlint-rules](https://github.com/brightec/ktlint-rules_Kotlin) for our custom rules. _(internal use only)_
 
-#### Integration
-
-See [Config_Android](https://github.com/brightec/Config_Android) _(internal use only)_
-
 ## Addendum
 
 - [Named Parameters](#named-parameters)
@@ -87,7 +83,7 @@ The use of ```_``` is encouraged for parameters which are not going to be used. 
 ## License
 
 ```
-Copyright 2020 Brightec Ltd.
+Copyright 2022 Brightec Ltd.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

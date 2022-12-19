@@ -8,17 +8,15 @@
 List of guidelines and libraries that we use at __brightec__ when developing for the __Android__ platform.
 
 * [Project Guidelines](project_guidelines.md)
-* [Java - Code Guidelines](code_guidelines_java.md)
 * [Kotlin - Code Guidelines](code_guidelines_kotlin.md)
+* [Java - Code Guidelines](code_guidelines_java.md)
 * [XML - Code Guidelines](code_guidelines_xml.md)
 * [Logging](logging.md)
-
-Internally we use [Config_Android](https://github.com/brightec/Config_Android) _(internal use only)_. This should added to  every Android project.
 
 # License
 
 ```
-Copyright 2020 Brightec Ltd.
+Copyright 2022 Brightec Ltd.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
