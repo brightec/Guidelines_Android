@@ -20,33 +20,7 @@ Note: See [ktlint-rules](https://github.com/brightec/ktlint-rules_Kotlin) for ou
 
 ## Addendum
 
-- [Named Parameters](#named-parameters)
 - [Lambdas](#lambdas)
-
-### Named Parameters
-
-When calling any function (not possible when calling java functions) with more than 2 parameters, you must make use of the named parameters language feature.
-
-__BAD:__
-
-```kotlin
-myFunction(1, true, ourString)
-```
-
-__GOOD:__
-
-```kotlin
-myFunction(parameterSize = 1, isNecessary = true, name = ourString)
-```
-
-It is not considered bad practice either way for functions of 2 parameters or less.
-
-The same style should be applied to constructor invocation too.
-
-Exception: Classes which represent tuples (e.g. Triple) or lists (e.g. listOf()), do not need to be invoked using named parameters. This is because they provide no clarity and the invocation should always be done in order regardless.
-E.g. ```Triple(objA, objB, objC)``` NOT ```Triple(first = objA, second = objB, third = objC)```
-
-Exception: If all parameters being passed are identical then naming is not required, however is encouraged if it brings extra clarity. E.g. ```repo.someMethod(any(), any(), any())``` is acceptable. ```repo.someMethod(shouldBe1, 1, 1)``` is not.
 
 ### Lambdas
 
@@ -83,7 +57,7 @@ The use of ```_``` is encouraged for parameters which are not going to be used. 
 ## License
 
 ```
-Copyright 2022 Brightec Ltd.
+Copyright 2025 Brightec Ltd.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
